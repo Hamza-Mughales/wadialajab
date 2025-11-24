@@ -65,8 +65,8 @@
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#667eea] to-[#764ba2] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">الحساب بالريال اليمني</div>
                     <div class="text-lg sm:text-xl font-bold text-gray-800 text-left break-all" dir="ltr">
-                        <span class="inline-block bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mr-1 sm:mr-2">YER</span>
-                        123123213
+                        <span class="inline-block bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mr-1 sm:mr-2">ريال</span>
+                        121525025
                     </div>
                 </div>
 
@@ -75,24 +75,24 @@
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#667eea] to-[#764ba2] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">الحساب بالريال السعودي</div>
                     <div class="text-lg sm:text-xl font-bold text-gray-800 text-left break-all" dir="ltr">
-                        <span class="inline-block bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mr-1 sm:mr-2">SAR</span>
-                        123132123
+                        <span class="inline-block bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mr-1 sm:mr-2">ر.س</span>
+                        421204501
                     </div>
                 </div>
 
                 <!-- USD Account -->
                 <div class="group bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-[#667eea] hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-200 relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#667eea] to-[#764ba2] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">الحساب بالدولار الأمريكي</div>
+                    <div class="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">الحساب بالريال - مناطق الشرعية</div>
                     <div class="text-lg sm:text-xl font-bold text-gray-800 text-left break-all" dir="ltr">
-                        <span class="inline-block bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mr-1 sm:mr-2">USD</span>
-                        1231232
+                        <span class="inline-block bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mr-1 sm:mr-2">ريال</span>
+                        3155039611
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Contact Section -->
+        <!-- Contact Section
         <div class="mb-8 sm:mb-10">
             <h2 class="text-xl sm:text-2xl font-bold text-gray-700 mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
                 <span class="w-1 h-6 sm:h-7 bg-gradient-to-b from-[#667eea] to-[#764ba2] rounded"></span>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- CTA Section -->
         <div class="text-center mt-8 sm:mt-12 pt-6 sm:pt-8 border-t-2 border-gray-200">
