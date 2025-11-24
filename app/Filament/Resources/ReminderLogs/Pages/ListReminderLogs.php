@@ -3,7 +3,6 @@
 namespace App\Filament\Resources\ReminderLogs\Pages;
 
 use App\Filament\Resources\ReminderLogs\ReminderLogResource;
-use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 
 class ListReminderLogs extends ListRecords

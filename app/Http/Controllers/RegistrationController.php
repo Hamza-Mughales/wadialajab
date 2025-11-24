@@ -26,5 +26,3 @@ class RegistrationController extends Controller
         return view('join-success');
     }
 }
-
-

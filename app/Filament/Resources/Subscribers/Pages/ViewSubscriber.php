@@ -19,5 +19,3 @@ class ViewSubscriber extends ViewRecord
         ];
     }
 }
-
-

@@ -9,5 +9,3 @@ class ViewReminderLog extends ViewRecord
 {
     protected static string $resource = ReminderLogResource::class;
 }
-
-

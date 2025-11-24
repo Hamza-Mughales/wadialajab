@@ -55,7 +55,7 @@ class ReminderLogResource extends Resource
     {
         return [
             'index' => ListReminderLogs::route('/'),
-            'view'  => ViewReminderLog::route('/{record}'),
+            'view' => ViewReminderLog::route('/{record}'),
         ];
     }
 }

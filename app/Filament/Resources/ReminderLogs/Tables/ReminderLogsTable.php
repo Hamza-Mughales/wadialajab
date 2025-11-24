@@ -30,7 +30,7 @@ class ReminderLogsTable
                     ->badge()
                     ->colors([
                         'success' => 'sent',
-                        'danger'  => 'failed',
+                        'danger' => 'failed',
                     ]),
 
                 TextColumn::make('created_at')

@@ -22,5 +22,3 @@ class Subscriber extends Model
         return $this->hasMany(ReminderLog::class);
     }
 }
-
-

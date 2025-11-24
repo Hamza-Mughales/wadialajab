@@ -31,20 +31,18 @@ class SendMonthlyRemindersJob implements ShouldQueue
 
                     ReminderLog::create([
                         'subscriber_id' => $subscriber->id,
-                        'message'       => $message,
+                        'message' => $message,
                         // For now treat mocked as "sent"
-                        'status'        => 'sent',
+                        'status' => 'sent',
                     ]);
                 } catch (\Throwable $e) {
                     ReminderLog::create([
                         'subscriber_id' => $subscriber->id,
-                        'message'       => $message,
-                        'status'        => 'failed',
+                        'message' => $message,
+                        'status' => 'failed',
                     ]);
                 }
             }
         });
     }
 }
-
-

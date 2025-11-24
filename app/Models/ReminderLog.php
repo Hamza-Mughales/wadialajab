@@ -21,5 +21,3 @@ class ReminderLog extends Model
         return $this->belongsTo(Subscriber::class);
     }
 }
-
-
