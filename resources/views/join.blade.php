@@ -13,43 +13,9 @@
             font-family: 'Cairo', sans-serif;
         }
         
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            position: relative;
-            overflow-x: hidden;
-        }
-        
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
-            animation: float 20s linear infinite;
-        }
-        
         @keyframes float {
             0% { transform: translateY(0); }
             100% { transform: translateY(-100px); }
-        }
-        
-        .container {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            padding: 2.5rem;
-            width: 100%;
-            max-width: 480px;
-            position: relative;
-            animation: slideUp 0.6s ease-out;
         }
         
         @keyframes slideUp {
@@ -63,132 +29,41 @@
             }
         }
         
-        h1 {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        label {
-            display: block;
-            font-weight: 600;
-            color: #4a5568;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-        
-        input {
-            width: 100%;
-            padding: 0.875rem 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            background: white;
-        }
-        
-        input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        input:hover {
-            border-color: #cbd5e0;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
-        }
-        
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-        
-        .footer-text {
-            text-align: center;
-            color: #718096;
-            font-size: 0.875rem;
-            margin-top: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .error-box {
-            background: linear-gradient(135deg, #fee 0%, #fdd 100%);
-            border: 2px solid #fc8181;
-            border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            animation: shake 0.5s ease;
-        }
-        
         @keyframes shake {
             0%, 100% { transform: translateX(0); }
             25% { transform: translateX(-10px); }
             75% { transform: translateX(10px); }
         }
         
-        .error-box ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .animate-float {
+            animation: float 20s linear infinite;
         }
         
-        .error-box li {
-            color: #c53030;
-            font-size: 0.9rem;
-            padding: 0.25rem 0;
-            padding-right: 1.5rem;
-            position: relative;
+        .animate-slideUp {
+            animation: slideUp 0.6s ease-out;
         }
         
-        .error-box li::before {
-            content: '⚠';
-            position: absolute;
-            right: 0;
-            color: #fc8181;
-        }
-        
-        .required {
-            color: #e53e3e;
+        .animate-shake {
+            animation: shake 0.5s ease;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>انضم إلى صندوق <br>وادي العجب الخيري</h1>
+<body class="bg-gradient-to-br from-[#667eea] via-[#764ba2] to-[#f093fb] min-h-screen flex items-center justify-center p-4 sm:p-6 relative overflow-x-hidden">
+    <div class="absolute inset-0 animate-float" style="background: url('data:image/svg+xml,<svg width=&quot;100&quot; height=&quot;100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;2&quot; fill=&quot;white&quot; opacity=&quot;0.1&quot;/></svg>');"></div>
+    
+    <div class="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 w-full max-w-md relative animate-slideUp">
+        <h1 class="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8 bg-gradient-to-r from-[#667eea] to-[#764ba2] bg-clip-text text-transparent leading-tight">
+            انضم إلى صندوق <br>وادي العجب الخيري
+        </h1>
 
         @if ($errors->any())
-            <div class="error-box">
-                <ul>
+            <div class="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-400 rounded-xl p-4 mb-6 animate-shake">
+                <ul class="list-none p-0 m-0">
                     @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                        <li class="text-red-700 text-sm py-1 pr-6 relative">
+                            <span class="absolute right-0 text-red-400">⚠</span>
+                            {{ $error }}
+                        </li>
                     @endforeach
                 </ul>
             </div>
@@ -197,8 +72,10 @@
         <form action="{{ route('join.store') }}" method="POST">
             @csrf
 
-            <div class="form-group">
-                <label for="full_name">الاسم الكامل <span class="required">*</span></label>
+            <div class="mb-5 sm:mb-6">
+                <label for="full_name" class="block font-semibold text-gray-700 mb-2 text-sm">
+                    الاسم الكامل <span class="text-red-600">*</span>
+                </label>
                 <input
                     type="text"
                     name="full_name"
@@ -206,11 +83,14 @@
                     value="{{ old('full_name') }}"
                     required
                     placeholder="أدخل اسمك الكامل"
+                    class="w-full px-3 sm:px-4 py-3 sm:py-3.5 border-2 border-gray-200 rounded-xl text-base transition-all duration-300 bg-white focus:outline-none focus:border-[#667eea] focus:shadow-lg focus:shadow-purple-200/50 focus:-translate-y-0.5 hover:border-gray-300"
                 >
             </div>
 
-            <div class="form-group">
-                <label for="phone">رقم الهاتف <span class="required">*</span></label>
+            <div class="mb-5 sm:mb-6">
+                <label for="phone" class="block font-semibold text-gray-700 mb-2 text-sm">
+                    رقم الهاتف <span class="text-red-600">*</span>
+                </label>
                 <input
                     type="text"
                     name="phone"
@@ -218,11 +98,14 @@
                     value="{{ old('phone') }}"
                     required
                     placeholder="مثال: 777111222"
+                    class="w-full px-3 sm:px-4 py-3 sm:py-3.5 border-2 border-gray-200 rounded-xl text-base transition-all duration-300 bg-white focus:outline-none focus:border-[#667eea] focus:shadow-lg focus:shadow-purple-200/50 focus:-translate-y-0.5 hover:border-gray-300"
                 >
             </div>
 
-            <div class="form-group">
-                <label for="amount">المبلغ الشهري <span class="required">*</span></label>
+            <div class="mb-5 sm:mb-6">
+                <label for="amount" class="block font-semibold text-gray-700 mb-2 text-sm">
+                    المبلغ الشهري <span class="text-red-600">*</span>
+                </label>
                 <input
                     type="number"
                     step="1"
@@ -232,30 +115,32 @@
                     value="{{ old('amount') }}"
                     required
                     placeholder="مثال: 1000"
+                    class="w-full px-3 sm:px-4 py-3 sm:py-3.5 border-2 border-gray-200 rounded-xl text-base transition-all duration-300 bg-white focus:outline-none focus:border-[#667eea] focus:shadow-lg focus:shadow-purple-200/50 focus:-translate-y-0.5 hover:border-gray-300"
                 >
             </div>
 
-            <div class="form-group">
-                <label for="email">البريد الإلكتروني (اختياري)</label>
+            <div class="mb-5 sm:mb-6">
+                <label for="email" class="block font-semibold text-gray-700 mb-2 text-sm">
+                    البريد الإلكتروني (اختياري)
+                </label>
                 <input
                     type="email"
                     name="email"
                     id="email"
                     value="{{ old('email') }}"
                     placeholder="example@email.com"
+                    class="w-full px-3 sm:px-4 py-3 sm:py-3.5 border-2 border-gray-200 rounded-xl text-base transition-all duration-300 bg-white focus:outline-none focus:border-[#667eea] focus:shadow-lg focus:shadow-purple-200/50 focus:-translate-y-0.5 hover:border-gray-300"
                 >
             </div>
 
-            <button type="submit" class="submit-btn">
+            <button type="submit" class="w-full px-4 py-3.5 sm:py-4 bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white border-0 rounded-xl text-base sm:text-lg font-bold cursor-pointer transition-all duration-300 mt-3 sm:mt-4 shadow-lg shadow-purple-400/50 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-purple-400/60 active:translate-y-0">
                 انضم الآن
             </button>
 
-            <p class="footer-text">
+            <p class="text-center text-gray-600 text-sm mt-5 sm:mt-6 leading-relaxed px-2">
                 مساهمتك ليست مجرد مبلغ… إنها رحمة تصل لمن يحتاجها. شكرًا ليدك التي تعين وتواسي وتخفّف عن الآخرين.
             </p>
         </form>
     </div>
 </body>
 </html>
-
-
