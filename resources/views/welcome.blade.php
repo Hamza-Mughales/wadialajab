@@ -119,7 +119,7 @@
             </a>
             
             <p class="mt-6 sm:mt-8 text-green-600 text-base sm:text-lg font-semibold px-4">
-                جزاكم الله خيراً على كل مساهمة تقدمونها
+                عطاؤكم يصنع أثرًا كبيرًا
             </p>
         </div>
     </div>
