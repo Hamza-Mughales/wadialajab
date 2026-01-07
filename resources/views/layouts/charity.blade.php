@@ -176,38 +176,38 @@
 <body class="bg-gray-50 antialiased">
     
     <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 sm:h-20">
                 <!-- Logo (Right Side) -->
-                <a href="{{ url('/') }}" class="flex items-center space-x-2 sm:space-x-3 space-x-reverse group">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300">
+                <a href="{{ url('/') }}" class="flex items-center space-x-2 sm:space-x-3 space-x-reverse group relative z-10">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
                         <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
                     </div>
-                    <span class="text-sm font-bold gradient-text block sm:hidden">وادي العجب</span>
-                    <span class="text-base sm:text-xl font-bold gradient-text hidden sm:block">صندوق وادي العجب الخيري</span>
+                    <span class="text-sm font-bold text-white drop-shadow-lg block sm:hidden">وادي العجب</span>
+                    <span class="text-base sm:text-xl font-bold text-white drop-shadow-lg hidden sm:block">صندوق وادي العجب الخيري</span>
                 </a>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
-                    <a href="{{ url('/') }}" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200 {{ request()->is('/') ? 'text-blue-600' : '' }}">الرئيسية</a>
-                    <a href="{{ url('/#about') }}" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">من نحن</a>
-                    <a href="{{ url('/#donate') }}" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">تبرع الآن</a>
-                    <a href="{{ url('/contact') }}" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200 {{ request()->is('contact') ? 'text-blue-600' : '' }}">اتصل بنا</a>
+                    <a href="{{ url('/') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg {{ request()->is('/') ? 'text-blue-300' : '' }}">الرئيسية</a>
+                    <a href="{{ url('/#about') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg">من نحن</a>
+                    <a href="{{ url('/#donate') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg">تبرع الآن</a>
+                    <a href="{{ url('/contact') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg {{ request()->is('contact') ? 'text-blue-300' : '' }}">اتصل بنا</a>
                 </div>
                 
                 <!-- CTA Button -->
                 <div class="hidden lg:block">
-                    <a href="{{ url('/#donate') }}" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-emerald-500 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    <a href="{{ url('/#donate') }}" class="px-6 py-3 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                         ساهم في إنقاذ حياة
                     </a>
                 </div>
                 
                 <!-- Mobile Menu Button (Left Side) -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl hover:bg-blue-50 transition-colors">
-                    <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl hover:bg-white/20 transition-colors relative z-10">
+                    <svg class="w-7 h-7 text-white drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
@@ -334,7 +334,14 @@
             // Toggle menu on button click
             mobileMenuBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                mobileMenu.classList.toggle('active');
+                const isActive = mobileMenu.classList.toggle('active');
+                
+                // Toggle navbar background
+                if (isActive) {
+                    navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+                } else {
+                    navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+                }
             });
             
             // Close menu when clicking outside
@@ -343,6 +350,7 @@
                     // Check if click is outside navbar
                     if (!navbar.contains(e.target)) {
                         mobileMenu.classList.remove('active');
+                        navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
                     }
                 }
             });
@@ -352,6 +360,7 @@
             menuLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.remove('active');
+                    navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
                 });
             });
         }
