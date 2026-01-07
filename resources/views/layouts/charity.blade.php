@@ -251,7 +251,7 @@
     </nav>
     
     <!-- Main Content -->
-    <main class="pt-20">
+    <main>
         @yield('content')
     </main>
     
