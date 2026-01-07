@@ -181,7 +181,7 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="{{ url('/') }}" class="flex items-center space-x-3 space-x-reverse group">
-                    <div class="ml-2 w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300">
+                    <div class="ml-2 w-12 h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300">
                         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
@@ -191,15 +191,15 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
-                    <a href="{{ url('/') }}" class="text-gray-700 hover:text-red-600 font-semibold transition-colors duration-200 {{ request()->is('/') ? 'text-red-600' : '' }}">الرئيسية</a>
-                    <a href="{{ url('/#about') }}" class="text-gray-700 hover:text-red-600 font-semibold transition-colors duration-200">من نحن</a>
-                    <a href="{{ url('/#donate') }}" class="text-gray-700 hover:text-red-600 font-semibold transition-colors duration-200">تبرع الآن</a>
-                    <a href="{{ url('/contact') }}" class="text-gray-700 hover:text-red-600 font-semibold transition-colors duration-200 {{ request()->is('contact') ? 'text-red-600' : '' }}">اتصل بنا</a>
+                    <a href="{{ url('/') }}" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200 {{ request()->is('/') ? 'text-blue-600' : '' }}">الرئيسية</a>
+                    <a href="{{ url('/#about') }}" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">من نحن</a>
+                    <a href="{{ url('/#donate') }}" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">تبرع الآن</a>
+                    <a href="{{ url('/contact') }}" class="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200 {{ request()->is('contact') ? 'text-blue-600' : '' }}">اتصل بنا</a>
                 </div>
                 
                 <!-- CTA Button -->
                 <div class="hidden lg:block">
-                    <a href="{{ url('/#donate') }}" class="px-6 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    <a href="{{ url('/#donate') }}" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-emerald-500 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                         ساهم في إنقاذ حياة
                     </a>
                 </div>
@@ -215,11 +215,11 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="mobile-menu lg:hidden">
                 <div class="py-4 space-y-3">
-                    <a href="{{ url('/') }}" class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-lg font-semibold transition-colors {{ request()->is('/') ? 'bg-red-50 text-red-600' : '' }}">الرئيسية</a>
-                    <a href="{{ url('/#about') }}" class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-lg font-semibold transition-colors">من نحن</a>
-                    <a href="{{ url('/#donate') }}" class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-lg font-semibold transition-colors">تبرع الآن</a>
-                    <a href="{{ url('/contact') }}" class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-lg font-semibold transition-colors {{ request()->is('contact') ? 'bg-red-50 text-red-600' : '' }}">اتصل بنا</a>
-                    <a href="{{ url('/#donate') }}" class="block mx-4 px-6 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-bold rounded-xl text-center shadow-lg">ساهم في إنقاذ حياة</a>
+                    <a href="{{ url('/') }}" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg font-semibold transition-colors {{ request()->is('/') ? 'bg-blue-50 text-blue-600' : '' }}">الرئيسية</a>
+                    <a href="{{ url('/#about') }}" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg font-semibold transition-colors">من نحن</a>
+                    <a href="{{ url('/#donate') }}" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg font-semibold transition-colors">تبرع الآن</a>
+                    <a href="{{ url('/contact') }}" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg font-semibold transition-colors {{ request()->is('contact') ? 'bg-blue-50 text-blue-600' : '' }}">اتصل بنا</a>
+                    <a href="{{ url('/#donate') }}" class="block mx-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-emerald-500 text-white font-bold rounded-xl text-center shadow-lg">ساهم في إنقاذ حياة</a>
                 </div>
             </div>
         </div>
@@ -237,7 +237,7 @@
                 <!-- About Section -->
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
-                        <div class="ml-4 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                        <div class="ml-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-emerald-400 rounded-xl flex items-center justify-center">
                             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                             </svg>
@@ -282,7 +282,7 @@
     </footer>
     
     <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="fixed bottom-8 left-8 w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:shadow-xl hover:-translate-y-1 z-40 flex items-center justify-center">
+    <button id="scroll-to-top" class="fixed bottom-8 left-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-emerald-500 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:shadow-xl hover:-translate-y-1 z-40 flex items-center justify-center">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>

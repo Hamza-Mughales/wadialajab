@@ -61,7 +61,7 @@
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <!-- YER Account -->
-                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-[#667eea] hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-200 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-blue-50 to-emerald-50 border-2 border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-[#667eea] hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-200 relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#667eea] to-[#764ba2] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">الحساب بالريال اليمني</div>
                     <div class="text-lg sm:text-xl font-bold text-gray-800 text-left break-all" dir="ltr">
@@ -71,7 +71,7 @@
                 </div>
 
                 <!-- SAR Account -->
-                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-[#667eea] hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-200 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-blue-50 to-emerald-50 border-2 border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-[#667eea] hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-200 relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#667eea] to-[#764ba2] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">الحساب بالريال السعودي</div>
                     <div class="text-lg sm:text-xl font-bold text-gray-800 text-left break-all" dir="ltr">
@@ -81,7 +81,7 @@
                 </div>
 
                 <!-- USD Account -->
-                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-[#667eea] hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-200 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-blue-50 to-emerald-50 border-2 border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-[#667eea] hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-200 relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#667eea] to-[#764ba2] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">الحساب بالريال - مناطق الشرعية</div>
                     <div class="text-lg sm:text-xl font-bold text-gray-800 text-left break-all" dir="ltr">
@@ -99,7 +99,7 @@
                 التواصل معنا
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                <div class="group bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-[#667eea] hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-200 relative overflow-hidden">
+                <div class="group bg-gradient-to-br from-blue-50 to-emerald-50 border-2 border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-6 transition-all duration-300 hover:border-[#667eea] hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-200 relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#667eea] to-[#764ba2] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="text-xs sm:text-sm text-gray-600 mb-2 font-semibold">رقم الهاتف</div>
                     <div class="text-lg sm:text-xl font-bold text-gray-800 text-left flex items-center justify-end" dir="ltr">

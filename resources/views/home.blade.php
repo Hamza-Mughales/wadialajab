@@ -6,15 +6,15 @@
 @section('content')
 
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-red-900 via-pink-900 to-purple-900">
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
         <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
     </div>
     
     <!-- Floating Medical Icons -->
-    <div class="absolute top-20 right-20 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
-    <div class="absolute bottom-20 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute top-20 right-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+    <div class="absolute bottom-20 left-20 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
     
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-5xl mx-auto">
@@ -30,18 +30,18 @@
             <!-- Main Heading -->
             <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight animate-fadeInUp">
                 معًا نُنقذ الأرواح
-                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-pink-300 mt-2">
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-emerald-300 mt-2">
                     ونُخفف الآلام
                 </span>
             </h1>
             
-            <p class="text-xl sm:text-2xl text-red-100 mb-12 leading-relaxed max-w-3xl mx-auto animate-fadeInUp" style="animation-delay: 0.2s;">
+            <p class="text-xl sm:text-2xl text-blue-100 mb-12 leading-relaxed max-w-3xl mx-auto animate-fadeInUp" style="animation-delay: 0.2s;">
                 صندوق وادي العجب الخيري يساعد المرضى المحتاجين في تكاليف العلاج والأدوية والعمليات الجراحية. تبرعك ينقذ حياة إنسان
             </p>
             
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 animate-fadeInUp" style="animation-delay: 0.4s;">
-                <a href="#donate" class="group px-12 py-6 bg-gradient-to-r from-red-500 to-pink-500 text-white text-2xl font-bold rounded-2xl shadow-2xl hover:shadow-red-500/50 transform hover:-translate-y-2 transition-all duration-300 flex items-center space-x-3 space-x-reverse">
+                <a href="#donate" class="group px-12 py-6 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-2xl font-bold rounded-2xl shadow-2xl hover:shadow-blue-500/50 transform hover:-translate-y-2 transition-all duration-300 flex items-center space-x-3 space-x-reverse">
                     <svg class="ml-2 w-8 h-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                     </svg>
@@ -59,21 +59,21 @@
             <!-- Stats -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fadeInUp" style="animation-delay: 0.6s;">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-                    <div class="text-5xl font-extrabold text-red-300 mb-2 counter" data-target="850">0</div>
-                    <div class="text-lg text-red-100 font-semibold">مريض تم مساعدته</div>
+                    <div class="text-5xl font-extrabold text-blue-300 mb-2 counter" data-target="850">0</div>
+                    <div class="text-lg text-blue-100 font-semibold">مريض تم مساعدته</div>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-                    <div class="text-5xl font-extrabold text-red-300 mb-2 counter" data-target="320">0</div>
-                    <div class="text-lg text-red-100 font-semibold">عملية جراحية</div>
+                    <div class="text-5xl font-extrabold text-blue-300 mb-2 counter" data-target="320">0</div>
+                    <div class="text-lg text-blue-100 font-semibold">عملية جراحية</div>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-                    <div class="text-5xl font-extrabold text-red-300 mb-2">
+                    <div class="text-5xl font-extrabold text-blue-300 mb-2">
                         <span class="counter" data-target="15">0</span>
                         <span class="text-3xl">M+</span>
                     </div>
-                    <div class="text-lg text-red-100 font-semibold">ريال تم جمعه</div>
+                    <div class="text-lg text-blue-100 font-semibold">ريال تم جمعه</div>
                 </div>
             </div>
         </div>
@@ -93,17 +93,17 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
-                    من <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600">نحن</span>
+                    من <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-500">نحن</span>
                 </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-pink-600 mx-auto rounded-full"></div>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-emerald-500 mx-auto rounded-full"></div>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Text Content -->
                 <div class="space-y-6">
-                    <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-3xl p-8 border-2 border-red-100">
+                    <div class="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-3xl p-8 border-2 border-blue-100">
                         <div class="flex items-start space-x-4 space-x-reverse mb-6">
-                            <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-pink-600 rounded-2xl flex items-center justify-center flex-shrink-0 ml-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-2xl flex items-center justify-center flex-shrink-0 ml-4">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                                 </svg>
@@ -117,9 +117,9 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-3xl p-8 border-2 border-red-100">
+                    <div class="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-3xl p-8 border-2 border-blue-100">
                         <div class="flex items-start space-x-4 space-x-reverse mb-6">
-                            <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-pink-600 rounded-2xl flex items-center justify-center flex-shrink-0 ml-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-2xl flex items-center justify-center flex-shrink-0 ml-4">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
@@ -140,9 +140,9 @@
                     <h3 class="text-3xl font-bold text-gray-900 mb-8">ما نقدمه للمرضى</h3>
                     
                     <div class="space-y-4">
-                        <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-red-500">
-                            <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0 ml-4">
-                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-blue-600">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 ml-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
                                 </svg>
                             </div>
@@ -152,9 +152,9 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-pink-500">
-                            <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center flex-shrink-0 ml-4">
-                                <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-emerald-500">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 ml-4">
+                                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                                 </svg>
                             </div>
@@ -164,9 +164,9 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-purple-500">
-                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0 ml-4">
-                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-cyan-500">
+                            <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center flex-shrink-0 ml-4">
+                                <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                                 </svg>
                             </div>
@@ -176,9 +176,9 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-red-500">
-                            <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0 ml-4">
-                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-blue-600">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 ml-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
@@ -200,7 +200,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
-                    ساهم في <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-pink-600">إنقاذ حياة</span>
+                    ساهم في <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-500">إنقاذ حياة</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     تبرعك اليوم قد ينقذ حياة مريض محتاج. كل ريال يُحدث فرقًا
@@ -210,7 +210,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Donation Impact -->
                 <div class="space-y-8">
-                    <div class="bg-gradient-to-br from-red-600 to-pink-600 rounded-3xl p-8 text-white shadow-2xl">
+                    <div class="bg-gradient-to-br from-blue-600 to-emerald-500 rounded-3xl p-8 text-white shadow-2xl">
                         <div class="text-center mb-6">
                             <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -218,13 +218,13 @@
                                 </svg>
                             </div>
                             <h3 class="text-3xl font-bold mb-3">اشتراك شهري</h3>
-                            <p class="text-red-100 text-lg">كن شريكاً دائماً في الخير</p>
+                            <p class="text-blue-100 text-lg">كن شريكاً دائماً في الخير</p>
                         </div>
                         
                         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/20">
                             <div class="text-center mb-6">
                                 <div class="text-6xl font-extrabold mb-2">1,000</div>
-                                <div class="text-xl font-semibold text-red-100">ريال شهرياً</div>
+                                <div class="text-xl font-semibold text-blue-100">ريال شهرياً</div>
                             </div>
                             
                             <div class="space-y-4">
@@ -232,35 +232,35 @@
                                     <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span class="text-red-50">مساهمة مستمرة في إنقاذ الأرواح</span>
+                                    <span class="text-blue-50">مساهمة مستمرة في إنقاذ الأرواح</span>
                                 </div>
                                 
                                 <div class="flex items-center space-x-3 space-x-reverse">
                                     <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span class="text-red-50">دعم شهري لمرضى محتاجين</span>
+                                    <span class="text-blue-50">دعم شهري لمرضى محتاجين</span>
                                 </div>
                                 
                                 <div class="flex items-center space-x-3 space-x-reverse">
                                     <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
-                                    <span class="text-red-50">أجر متجدد كل شهر</span>
+                                    <span class="text-blue-50">أجر متجدد كل شهر</span>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="mt-6 text-center">
-                            <p class="text-sm text-red-100 leading-relaxed">
+                            <p class="text-sm text-blue-100 leading-relaxed">
                                 يمكنك الاشتراك الشهري بإيداع 1,000 ريال شهرياً في أي من حساباتنا البنكية
                             </p>
                         </div>
                     </div>
                     
                     <!-- Call to Action -->
-                    <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-3xl p-8 border-2 border-red-100 text-center">
-                        <div class="w-20 h-20 bg-gradient-to-br from-red-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-3xl p-8 border-2 border-blue-100 text-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                             <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                             </svg>
@@ -274,10 +274,10 @@
                 
                 <!-- Bank Accounts -->
                 <div>
-                    <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-3xl p-8 sm:p-10 border-2 border-red-100 shadow-2xl">
+                    <div class="bg-gradient-to-br from-blue-50 to-emerald-50 rounded-3xl p-8 sm:p-10 border-2 border-blue-100 shadow-2xl">
                         <!-- Header -->
                         <div class="text-center mb-10">
-                            <div class="w-20 h-20 bg-gradient-to-br from-red-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg">
                                 <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
                                 </svg>
@@ -289,37 +289,37 @@
                         <!-- Bank Accounts Cards -->
                         <div class="space-y-5">
                             <!-- YER Account -->
-                            <div class="bg-white rounded-2xl p-6 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <div class="bg-white rounded-2xl p-6 border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                                 <div class="flex items-center justify-between mb-4">
                                     <div class="text-base font-bold text-gray-800">الحساب بالريال اليمني</div>
-                                    <span class="px-4 py-1.5 bg-gradient-to-r from-red-600 to-pink-600 text-white text-sm font-bold rounded-full shadow-md">ريال</span>
+                                    <span class="px-4 py-1.5 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-sm font-bold rounded-full shadow-md">ريال</span>
                                 </div>
                                 <div class="text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">121525025</div>
                             </div>
                             
                             <!-- SAR Account -->
-                            <div class="bg-white rounded-2xl p-6 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <div class="bg-white rounded-2xl p-6 border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                                 <div class="flex items-center justify-between mb-4">
                                     <div class="text-base font-bold text-gray-800">الحساب بالريال السعودي</div>
-                                    <span class="px-4 py-1.5 bg-gradient-to-r from-red-600 to-pink-600 text-white text-sm font-bold rounded-full shadow-md">ر.س</span>
+                                    <span class="px-4 py-1.5 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-sm font-bold rounded-full shadow-md">ر.س</span>
                                 </div>
                                 <div class="text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">421204501</div>
                             </div>
                             
                             <!-- Legitimacy Areas Account -->
-                            <div class="bg-white rounded-2xl p-6 border-2 border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                            <div class="bg-white rounded-2xl p-6 border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                                 <div class="flex items-center justify-between mb-4">
                                     <div class="text-base font-bold text-gray-800">الحساب بالريال - مناطق الشرعية</div>
-                                    <span class="px-4 py-1.5 bg-gradient-to-r from-red-600 to-pink-600 text-white text-sm font-bold rounded-full shadow-md">ريال</span>
+                                    <span class="px-4 py-1.5 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-sm font-bold rounded-full shadow-md">ريال</span>
                                 </div>
                                 <div class="text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">3155039611</div>
                             </div>
                         </div>
                         
                         <!-- Note -->
-                        <div class="mt-8 p-5 bg-white rounded-2xl border-2 border-red-200 shadow-sm">
+                        <div class="mt-8 p-5 bg-white rounded-2xl border-2 border-blue-200 shadow-sm">
                             <div class="flex items-start space-x-3 space-x-reverse">
-                                <svg class="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                                 <p class="text-sm text-gray-700 leading-relaxed font-medium">
@@ -335,13 +335,13 @@
 </section>
 
 <!-- Contact Section -->
-<section class="py-20 bg-gradient-to-br from-red-900 via-pink-900 to-purple-900 text-white" data-animate>
+<section class="py-20 bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white" data-animate>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl sm:text-5xl font-extrabold mb-6">
                 تواصل معنا
             </h2>
-            <p class="text-xl text-red-100 mb-12 leading-relaxed">
+            <p class="text-xl text-blue-100 mb-12 leading-relaxed">
                 نحن هنا لمساعدتك. تواصل معنا لأي استفسار أو للتقديم على المساعدة الطبية
             </p>
             
@@ -353,7 +353,7 @@
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-2">الهاتف</h3>
-                    <p class="text-red-100" dir="ltr">+967 987 987 987</p>
+                    <p class="text-blue-100" dir="ltr">+967 987 987 987</p>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
@@ -364,7 +364,7 @@
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-2">العنوان</h3>
-                    <p class="text-red-100">اليمن - صنعاء - تعز</p>
+                    <p class="text-blue-100">اليمن - صنعاء - تعز</p>
                 </div>
             </div>
             
