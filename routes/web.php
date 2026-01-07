@@ -8,10 +8,6 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
 // Legacy routes (if needed for existing system)
 Route::get('/welcome', function () {
     return view('welcome');
