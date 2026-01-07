@@ -272,8 +272,8 @@
             
             <!-- Copyright -->
             <div class="border-t border-white/10 pt-8">
-                <div class="flex items-center justify-between">
-                    <p class="text-gray-400 text-center flex-1">
+                <div class="flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
+                    <p class="text-gray-400 text-center sm:flex-1">
                         © <span id="current-year"></span> صندوق وادي العجب الخيري.
                     </p>
                     <a href="https://hamza-mughales.github.io/" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-2 space-x-reverse text-gray-400 hover:text-white transition-all duration-300">

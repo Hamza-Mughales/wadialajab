@@ -41,14 +41,14 @@
             
             <!-- CTA Buttons -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16 animate-fadeInUp" style="animation-delay: 0.4s;">
-                <a href="#donate" class="group px-12 py-6 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-2xl font-bold rounded-2xl shadow-2xl hover:shadow-blue-500/50 transform hover:-translate-y-2 transition-all duration-300 flex items-center space-x-3 space-x-reverse">
+                <a href="#donate" class="group px-8 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-lg sm:text-2xl font-bold rounded-2xl shadow-2xl hover:shadow-blue-500/50 transform hover:-translate-y-2 transition-all duration-300 flex items-center space-x-3 space-x-reverse">
                     <svg class="ml-2 w-8 h-8 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                     </svg>
                     <span>ساهم في إنقاذ حياة</span>
                 </a>
                 
-                <a href="#about" class="px-12 py-6 bg-white/10 backdrop-blur-md text-white text-2xl font-bold rounded-2xl border-2 border-white/30 hover:bg-white/20 transform hover:-translate-y-2 transition-all duration-300 flex items-center space-x-3 space-x-reverse">
+                <a href="#about" class="px-8 sm:px-12 py-4 sm:py-6 bg-white/10 backdrop-blur-md text-white text-lg sm:text-2xl font-bold rounded-2xl border-2 border-white/30 hover:bg-white/20 transform hover:-translate-y-2 transition-all duration-300 flex items-center space-x-3 space-x-reverse">
                     <span>تعرف على مهمتنا</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -59,19 +59,19 @@
             <!-- Stats -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fadeInUp" style="animation-delay: 0.6s;">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-                    <div class="text-5xl font-extrabold text-blue-300 mb-2 counter" data-target="850">0</div>
+                    <div class="text-3xl sm:text-5xl font-extrabold text-blue-300 mb-2 counter" data-target="850">0</div>
                     <div class="text-lg text-blue-100 font-semibold">مريض تم مساعدته</div>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-                    <div class="text-5xl font-extrabold text-blue-300 mb-2 counter" data-target="320">0</div>
+                    <div class="text-3xl sm:text-5xl font-extrabold text-blue-300 mb-2 counter" data-target="320">0</div>
                     <div class="text-lg text-blue-100 font-semibold">عملية جراحية</div>
                 </div>
                 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-2">
-                    <div class="text-5xl font-extrabold text-blue-300 mb-2">
+                    <div class="text-3xl sm:text-5xl font-extrabold text-blue-300 mb-2">
                         <span class="counter" data-target="15">0</span>
-                        <span class="text-3xl">M+</span>
+                        <span class="text-2xl sm:text-3xl">M+</span>
                     </div>
                     <div class="text-lg text-blue-100 font-semibold">ريال تم جمعه</div>
                 </div>
@@ -137,7 +137,7 @@
                 
                 <!-- Medical Services -->
                 <div class="space-y-6">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-8">ما نقدمه للمرضى</h3>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">ما نقدمه للمرضى</h3>
                     
                     <div class="space-y-4">
                         <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-blue-600">
@@ -217,13 +217,13 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-3xl font-bold mb-3">اشتراك شهري</h3>
+                            <h3 class="text-2xl sm:text-3xl font-bold mb-3">اشتراك شهري</h3>
                             <p class="text-blue-100 text-lg">كن شريكاً دائماً في الخير</p>
                         </div>
                         
                         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/20">
                             <div class="text-center mb-6">
-                                <div class="text-6xl font-extrabold mb-2">1,000</div>
+                                <div class="text-4xl sm:text-6xl font-extrabold mb-2">1,000</div>
                                 <div class="text-xl font-semibold text-blue-100">ريال شهرياً</div>
                             </div>
                             
@@ -282,7 +282,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-3xl font-extrabold text-gray-900 mb-3">الحسابات البنكية</h3>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3">الحسابات البنكية</h3>
                             <p class="text-lg text-gray-600 font-semibold">بنك الكريمي الإسلامي</p>
                         </div>
                         
@@ -294,7 +294,7 @@
                                     <div class="text-base font-bold text-gray-800">الحساب بالريال اليمني</div>
                                     <span class="px-4 py-1.5 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-sm font-bold rounded-full shadow-md">ريال</span>
                                 </div>
-                                <div class="text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">121525025</div>
+                                <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">121525025</div>
                             </div>
                             
                             <!-- SAR Account -->
@@ -303,7 +303,7 @@
                                     <div class="text-base font-bold text-gray-800">الحساب بالريال السعودي</div>
                                     <span class="px-4 py-1.5 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-sm font-bold rounded-full shadow-md">ر.س</span>
                                 </div>
-                                <div class="text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">421204501</div>
+                                <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">421204501</div>
                             </div>
                             
                             <!-- Legitimacy Areas Account -->
@@ -312,7 +312,7 @@
                                     <div class="text-base font-bold text-gray-800">الحساب بالريال - مناطق الشرعية</div>
                                     <span class="px-4 py-1.5 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-sm font-bold rounded-full shadow-md">ريال</span>
                                 </div>
-                                <div class="text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">3155039611</div>
+                                <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">3155039611</div>
                             </div>
                         </div>
                         
