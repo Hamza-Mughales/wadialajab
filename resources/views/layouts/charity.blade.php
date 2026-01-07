@@ -178,7 +178,7 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 sm:h-20">
+            <div class="relative flex justify-between items-center h-16 sm:h-20">
                 <!-- Logo (Right Side) -->
                 <a href="{{ url('/') }}" class="flex items-center space-x-2 sm:space-x-3 space-x-reverse group relative z-10">
                     <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
@@ -191,20 +191,12 @@
                 </a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                <div class="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
                     <a href="{{ url('/') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg {{ request()->is('/') ? 'text-blue-300' : '' }}">الرئيسية</a>
                     <a href="{{ url('/#about') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg">من نحن</a>
                     <a href="{{ url('/#donate') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg">تبرع الآن</a>
-                    <a href="{{ url('/contact') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg {{ request()->is('contact') ? 'text-blue-300' : '' }}">اتصل بنا</a>
                 </div>
-                
-                <!-- CTA Button -->
-                <div class="hidden lg:block">
-                    <a href="{{ url('/#donate') }}" class="px-6 py-3 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                        ساهم في إنقاذ حياة
-                    </a>
-                </div>
-                
+
                 <!-- Mobile Menu Button (Left Side) -->
                 <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl hover:bg-white/20 transition-colors relative z-10">
                     <svg class="w-7 h-7 text-white drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -232,12 +224,6 @@
                         <span class="ml-3">تبرع الآن</span>
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                        </svg>
-                    </a>
-                    <a href="{{ url('/contact') }}" class="flex items-center justify-start px-6 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-semibold transition-all text-lg {{ request()->is('contact') ? 'bg-blue-50 text-blue-600' : '' }}">
-                        <span class="ml-3">اتصل بنا</span>
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
                     </a>
                     <div class="pt-3 px-2">
@@ -329,29 +315,79 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const navbar = document.getElementById('navbar');
+        let isMobileMenuOpen = false;
+        
+        // Get all desktop menu links and logo text
+        const desktopLinks = navbar.querySelectorAll('.hidden.lg\\:flex a');
+        const logoTextElements = navbar.querySelectorAll('a[href*="/"] span'); // Get ALL logo text spans (mobile + desktop)
+        const menuIcon = mobileMenuBtn?.querySelector('svg');
+        
+        // Function to update navbar background based on scroll and menu state
+        function updateNavbarBackground() {
+            const currentScroll = window.pageYOffset;
+            const shouldShowBackground = isMobileMenuOpen || currentScroll > 50;
+            
+            if (shouldShowBackground) {
+                // Add white background
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+                
+                // Change text colors to dark for better contrast
+                desktopLinks.forEach(link => {
+                    link.classList.remove('text-white', 'hover:text-blue-300');
+                    link.classList.add('text-gray-800', 'hover:text-blue-600');
+                });
+                
+                // Update all logo text elements (mobile + desktop)
+                logoTextElements.forEach(logoText => {
+                    logoText.classList.remove('text-white');
+                    logoText.classList.add('text-gray-800');
+                });
+                
+                if (menuIcon) {
+                    menuIcon.classList.remove('text-white');
+                    menuIcon.classList.add('text-gray-800');
+                }
+                
+
+            } else {
+                // Remove white background
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+                
+                // Change text colors back to white
+                desktopLinks.forEach(link => {
+                    link.classList.remove('text-gray-800', 'hover:text-blue-600');
+                    link.classList.add('text-white', 'hover:text-blue-300');
+                });
+                
+                // Update all logo text elements (mobile + desktop)
+                logoTextElements.forEach(logoText => {
+                    logoText.classList.remove('text-gray-800');
+                    logoText.classList.add('text-white');
+                });
+                
+                if (menuIcon) {
+                    menuIcon.classList.remove('text-gray-800');
+                    menuIcon.classList.add('text-white');
+                }
+                
+
+            }
+        }
         
         if (mobileMenuBtn && mobileMenu) {
             // Toggle menu on button click
             mobileMenuBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const isActive = mobileMenu.classList.toggle('active');
-                
-                // Toggle navbar background
-                if (isActive) {
-                    navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
-                } else {
-                    navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
-                }
+                isMobileMenuOpen = mobileMenu.classList.toggle('active');
+                updateNavbarBackground();
             });
             
             // Close menu when clicking outside
             document.addEventListener('click', (e) => {
-                if (mobileMenu.classList.contains('active')) {
-                    // Check if click is outside navbar
-                    if (!navbar.contains(e.target)) {
-                        mobileMenu.classList.remove('active');
-                        navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
-                    }
+                if (isMobileMenuOpen && !navbar.contains(e.target)) {
+                    mobileMenu.classList.remove('active');
+                    isMobileMenuOpen = false;
+                    updateNavbarBackground();
                 }
             });
             
@@ -360,7 +396,8 @@
             menuLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.remove('active');
-                    navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-lg');
+                    isMobileMenuOpen = false;
+                    updateNavbarBackground();
                 });
             });
         }
@@ -369,6 +406,10 @@
         const scrollToTopBtn = document.getElementById('scroll-to-top');
         
         window.addEventListener('scroll', () => {
+            // Update navbar background on scroll
+            updateNavbarBackground();
+            
+            // Show/hide scroll to top button
             if (window.pageYOffset > 300) {
                 scrollToTopBtn.classList.remove('opacity-0', 'invisible');
                 scrollToTopBtn.classList.add('opacity-100', 'visible');
@@ -383,21 +424,6 @@
                 top: 0,
                 behavior: 'smooth'
             });
-        });
-        
-        // Navbar Scroll Effect
-        let lastScroll = 0;
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                navbar.classList.add('shadow-xl');
-            } else {
-                navbar.classList.remove('shadow-xl');
-            }
-            
-            lastScroll = currentScroll;
         });
         
         // Intersection Observer for Animations
