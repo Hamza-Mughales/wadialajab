@@ -159,8 +159,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-2">الأدوية والعلاجات</h4>
-                                <p class="text-gray-600">توفير الأدوية المكلفة والعلاجات الطبية للمرضى غير القادرين</p>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">تكاليف الدواء</h4>
+                                <p class="text-gray-600">توفير الأدوية المكلفة والضرورية للمرضى غير القادرين</p>
                             </div>
                         </div>
                         
@@ -171,20 +171,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-2">الفحوصات والتحاليل</h4>
-                                <p class="text-gray-600">تغطية تكاليف الفحوصات الطبية والتحاليل اللازمة للتشخيص</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4 space-x-reverse p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-r-4 border-blue-600">
-                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 ml-4">
-                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-2">الحالات الطارئة</h4>
-                                <p class="text-gray-600">التدخل السريع في الحالات الطارئة التي تتطلب علاجًا فوريًا</p>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">تكاليف التحاليل المخبرية</h4>
+                                <p class="text-gray-600">تغطية تكاليف التحاليل الطبية اللازمة للتشخيص والمتابعة</p>
                             </div>
                         </div>
                     </div>
@@ -224,7 +212,7 @@
                         <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 border-white/20">
                             <div class="text-center mb-6">
                                 <div class="text-4xl sm:text-6xl font-extrabold mb-2">1,000</div>
-                                <div class="text-xl font-semibold text-blue-100">ريال شهرياً</div>
+                                <div class="text-xl font-semibold text-blue-100">ريال شهرياً <span class="text-yellow-300 font-bold decoration-2 underline-offset-4">على الأقل</span></div>
                             </div>
                             
                             <div class="space-y-4">
@@ -253,7 +241,7 @@
                         
                         <div class="mt-6 text-center">
                             <p class="text-sm text-blue-100 leading-relaxed">
-                                يمكنك الاشتراك الشهري بإيداع 1,000 ريال شهرياً في أي من حساباتنا البنكية
+                                يمكنك الاشتراك الشهري بإيداع 1,000 ريال شهرياً <span class="text-yellow-300 font-bold ">على الأقل</span> في أي من حساباتنا البنكية
                             </p>
                         </div>
                     </div>
@@ -309,7 +297,7 @@
                             <!-- Legitimacy Areas Account -->
                             <div class="bg-white rounded-2xl p-6 border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                                 <div class="flex items-center justify-between mb-4">
-                                    <div class="text-base font-bold text-gray-800">الحساب بالريال - مناطق الشرعية</div>
+                                    <div class="text-base font-bold text-gray-800">الحساب بالريال اليمني - عدن</div>
                                     <span class="px-4 py-1.5 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-sm font-bold rounded-full shadow-md">ريال</span>
                                 </div>
                                 <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 font-mono text-center tracking-wider" dir="ltr">3155039611</div>
@@ -329,6 +317,29 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Beneficiary CTA -->
+<section class="py-16 bg-blue-50" data-animate>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-blue-100 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full -mr-16 -mt-16"></div>
+            <div class="absolute bottom-0 left-0 w-32 h-32 bg-emerald-500/5 rounded-full -ml-16 -mb-16"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">هل تحتاج إلى مساعدة طبية؟</h2>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+                    نحن هنا لخدمتك. إذا كنت مريضاً وبحاجة لدعم في تكاليف العلاج أو الأدوية، يمكنك التقديم الآن عبر بوابتنا الإلكترونية وسيقوم فريقنا بمراجعة حالتك.
+                </p>
+                <a href="{{ url('/apply') }}" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-xl font-bold rounded-2xl shadow-lg hover:shadow-blue-500/40 transform hover:-translate-y-1 transition-all duration-300 group">
+                    <span>تقديم طلب مساعدة</span>
+                    <svg class="mr-3 w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
             </div>
         </div>
     </div>
