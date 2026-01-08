@@ -181,19 +181,19 @@
             <div class="relative flex justify-between items-center h-16 sm:h-20">
                 <!-- Logo (Right Side) -->
                 <a href="{{ url('/') }}" class="flex items-center space-x-2 sm:space-x-3 space-x-reverse group relative z-10">
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                    <div class="ml-2 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
                         <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
                     </div>
-                    <span class="text-sm font-bold text-white drop-shadow-lg block sm:hidden">وادي العجب</span>
-                    <span class="text-base sm:text-xl font-bold text-white drop-shadow-lg hidden sm:block">صندوق وادي العجب الخيري</span>
+                    <span class="text-base sm:text-xl font-bold text-white drop-shadow-lg">صندوق وادي العجب الخيري</span>
                 </a>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
                     <a href="{{ url('/') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg {{ request()->is('/') ? 'text-blue-300' : '' }}">الرئيسية</a>
                     <a href="{{ url('/#about') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg">من نحن</a>
+                    <a href="{{ url('/apply') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg {{ request()->is('apply') ? 'text-blue-300' : '' }}">طلب مساعدة</a>
                     <a href="{{ url('/#donate') }}" class="text-white hover:text-blue-300 font-semibold transition-colors duration-200 drop-shadow-lg">تبرع الآن</a>
                 </div>
 
@@ -214,10 +214,16 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
                         </svg>
                     </a>
-                    <a href="{{ url('/#about') }}" class="flex items-center justify-start px-6 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-semibold transition-all text-lg">
+                    <a href="{{ url('/#about') }}" class="flex items-center justify-start px-6 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-semibold transition-all text-lg {{ request()->is('#about') ? 'bg-blue-50 text-blue-600' : '' }}">
                         <span class="ml-3">من نحن</span>
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </a>
+                    <a href="{{ url('/apply') }}" class="flex items-center justify-start px-6 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-semibold transition-all text-lg {{ request()->is('apply') ? 'bg-blue-50 text-blue-600' : '' }}">
+                        <span class="ml-3">طلب مساعدة</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
                     </a>
                     <a href="{{ url('/#donate') }}" class="flex items-center justify-start px-6 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-semibold transition-all text-lg">
