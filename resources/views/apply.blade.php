@@ -74,7 +74,7 @@
                 <!-- 2. Upload Form (Second on Mobile, Spans Rows on Desktop) -->
                 <div class="lg:col-span-2 lg:row-span-2 order-2">
                     <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100 animate-fadeInUp">
-                        <form action="#" method="POST" enctype="multipart/form-data" class="space-y-8">
+                        <form onsubmit="event.preventDefault(); alert('عذراً، نظام التقديم تحت التطوير حالياً وسيتم تفعيله قريباً. شكراً لتفهمكم.');" class="space-y-8">
                             @csrf
                             
                             <!-- File Upload Area -->
