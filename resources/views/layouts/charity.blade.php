@@ -14,6 +14,7 @@
     <meta property="og:description" content="@yield('og_description', 'نسعى لمد يد العون والمساعدة للمحتاجين في مجتمعنا')">
 
     <title>@yield('title', 'صندوق وادي العجب الخيري')</title>
+    <link rel="icon" href="{{ asset('logo.png') }}" type="image/png">
 
     @vite('resources/css/app.css')
 
