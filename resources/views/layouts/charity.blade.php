@@ -181,11 +181,7 @@
             <div class="relative flex justify-between items-center h-16 sm:h-20">
                 <!-- Logo (Right Side) -->
                 <a href="{{ url('/') }}" class="flex items-center space-x-2 sm:space-x-3 space-x-reverse group relative z-10">
-                    <div class="ml-2 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
-                        <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                        </svg>
-                    </div>
+<img src="{{ asset('logo.png') }}" class="ml-2 w-10 h-10 sm:w-16 sm:h-16 object-contain transform group-hover:rotate-6 transition-transform duration-300 drop-shadow-lg" alt="Logo">
                     <span class="text-base sm:text-xl font-bold text-white drop-shadow-lg">صندوق وادي العجب الخيري</span>
                 </a>
                 
@@ -254,11 +250,7 @@
                 <!-- About Section -->
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3 space-x-reverse mb-4">
-                        <div class="ml-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-emerald-400 rounded-xl flex items-center justify-center">
-                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-                        </div>
+                        <img src="{{ asset('logo.png') }}" class="ml-4 w-12 h-12 object-contain" alt="Logo">
                         <h3 class="text-xl font-bold">صندوق وادي العجب</h3>
                     </div>
                     <p class="text-gray-300 leading-relaxed">
