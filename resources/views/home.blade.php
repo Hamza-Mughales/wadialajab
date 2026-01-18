@@ -80,14 +80,14 @@
                     style="animation-delay: 0.6s;">
                     <div
                         class="rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:bg-white/20">
-                        <div class="counter mb-2 text-3xl font-extrabold text-blue-300 sm:text-5xl" data-target="850">0
+                        <div class="counter mb-2 text-3xl font-extrabold text-blue-300 sm:text-5xl" data-target="850">+50
                         </div>
                         <div class="text-lg font-semibold text-blue-100">مريض تم مساعدته</div>
                     </div>
 
                     <div
                         class="rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:bg-white/20">
-                        <div class="counter mb-2 text-3xl font-extrabold text-blue-300 sm:text-5xl" data-target="320">0
+                        <div class="counter mb-2 text-3xl font-extrabold text-blue-300 sm:text-5xl" data-target="320">+30
                         </div>
                         <div class="text-lg font-semibold text-blue-100">عملية جراحية</div>
                     </div>
