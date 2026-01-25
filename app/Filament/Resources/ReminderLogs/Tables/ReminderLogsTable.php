@@ -12,7 +12,7 @@ class ReminderLogsTable
     {
         return $table
             ->columns([
-                TextColumn::make('subscriber.full_name')
+                TextColumn::make('subscriber.name')
                     ->label(__('reminder_log.fields.subscriber_name'))
                     ->searchable(),
 
