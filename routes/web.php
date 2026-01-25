@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,9 +9,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/apply', function () {
-    return view('apply');
-})->name('apply');
+Route::get('/apply', [ApplicationController::class, 'create'])->name('apply');
+Route::post('/apply', [ApplicationController::class, 'store'])->name('apply.store');
+Route::get('/apply/success', [ApplicationController::class, 'success'])->name('apply.success');
 
 // Legacy routes (if needed for existing system)
 Route::get('/welcome', function () {

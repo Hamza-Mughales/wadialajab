@@ -88,20 +88,67 @@
                         </div>
                     </div>
 
-                    <!-- 2. Upload Form (Second on Mobile, Spans Rows on Desktop) -->
+                    <!-- 2. Application Form -->
                     <div class="lg:col-span-2 lg:row-span-2 order-2">
                         <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-gray-100 animate-fadeInUp">
-                            <form
-                                onsubmit="event.preventDefault(); alert('عذراً، نظام التقديم تحت التطوير حالياً وسيتم تفعيله قريباً. شكراً لتفهمكم.');"
-                                class="space-y-8">
+                            <form id="application-form" action="{{ route('apply.store') }}" method="POST" enctype="multipart/form-data" class="space-y-8">
                                 @csrf
+
+                                <!-- Global Error Message -->
+                                @if ($errors->any())
+                                    <div class="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-xl mb-6">
+                                        <div class="flex items-center mb-2">
+                                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <h4 class="font-bold">يرجى تصحيح الأخطاء التالية:</h4>
+                                        </div>
+                                        <ul class="list-disc list-inside text-sm space-y-1 mr-5">
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+
+                                <!-- Personal Information -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="md:col-span-2">
+                                        <label for="name" class="block text-lg font-bold text-gray-800 mb-2">الاسم الكامل</label>
+                                        <input type="text" id="name" name="name" required value="{{ old('name') }}"
+                                            class="w-full px-6 py-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:border-blue-400 focus:ring-0 transition-all duration-300 text-gray-700 placeholder-gray-400 @error('name') border-red-300 bg-red-50 @enderror">
+                                        @error('name')
+                                            <p class="text-red-500 text-sm mt-1 font-medium">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+
+                                    <div>
+                                        <label for="phone" class="block text-lg font-bold text-gray-800 mb-2">رقم الهاتف</label>
+                                        <input type="tel" id="phone" name="phone" required value="{{ old('phone') }}"
+                                            class="w-full px-6 py-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:border-blue-400 focus:ring-0 transition-all duration-300 text-gray-700 placeholder-gray-400 @error('phone') border-red-300 bg-red-50 @enderror"
+                                            placeholder="777777777">
+                                        @error('phone')
+                                            <p class="text-red-500 text-sm mt-1 font-medium">{{ $message }}</p>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <!-- Description Field -->
+                                <div>
+                                    <label for="description" class="block text-xl font-bold text-gray-800 mb-4">اشرح لنا حالتك
+                                        أو طلبك</label>
+                                    <textarea id="description" name="description" rows="6" required
+                                        class="w-full px-6 py-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:border-blue-400 focus:ring-0 transition-all duration-300 resize-none text-gray-700 text-lg placeholder-gray-400 @error('description') border-red-300 bg-red-50 @enderror"
+                                        placeholder="اكتب هنا تفاصيل حالتك الطبية والاحتياج المطلوب...">{{ old('description') }}</textarea>
+                                    @error('description')
+                                        <p class="text-red-500 text-sm mt-1 font-medium">{{ $message }}</p>
+                                    @enderror
+                                </div>
 
                                 <!-- File Upload Area -->
                                 <div>
                                     <label class="block text-xl font-bold text-gray-800 mb-4">رفع الملفات والتقارير</label>
                                     <div class="relative group">
                                         <div id="drop-area"
-                                            class="mt-1 flex justify-center px-6 pt-10 pb-10 border-2 border-gray-200 border-dashed rounded-3xl hover:border-blue-400 hover:bg-blue-50/50 transition-all duration-300 cursor-pointer">
+                                            class="mt-1 flex justify-center px-6 pt-10 pb-10 border-2 border-gray-200 border-dashed rounded-3xl hover:border-blue-400 hover:bg-blue-50/50 transition-all duration-300 cursor-pointer @error('files') border-red-300 bg-red-50 @enderror @error('files.*') border-red-300 bg-red-50 @enderror">
                                             <div class="space-y-4 text-center">
                                                 <div
                                                     class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -121,33 +168,33 @@
                                                     PNG, JPG, PDF (بحد أقصى 10MB)
                                                 </p>
                                             </div>
-                                            <input id="file-upload" name="medical_files[]" type="file" class="sr-only"
+                                            <input id="file-upload" name="files[]" type="file" class="sr-only"
                                                 multiple accept=".jpg,.jpeg,.png,.pdf">
                                         </div>
+                                        @error('files')
+                                            <p class="text-red-500 text-sm mt-2 font-medium text-center">{{ $message }}</p>
+                                        @enderror
+                                        @foreach($errors->get('files.*') as $fileErrors)
+                                            @foreach($fileErrors as $error)
+                                                <p class="text-red-500 text-sm mt-1 font-medium text-center">{{ $error }}</p>
+                                            @endforeach
+                                        @endforeach
+
                                         <!-- File Preview List -->
                                         <div id="file-preview-list" class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-4">
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Comment Field -->
-                                <div>
-                                    <label for="comment" class="block text-xl font-bold text-gray-800 mb-4">اشرح لنا حالتك
-                                        أو طلبك</label>
-                                    <textarea id="comment" name="comment" rows="6"
-                                        class="w-full px-6 py-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:border-blue-400 focus:ring-0 transition-all duration-300 resize-none text-gray-700 text-lg placeholder-gray-400"
-                                        placeholder="اكتب هنا تفاصيل حالتك الطبية والاحتياج المطلوب..."></textarea>
-                                </div>
-
                                 <!-- Submit Button -->
                                 <div class="pt-4">
-                                    <button type="submit"
-                                        class="w-full py-5 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-xl font-extrabold rounded-2xl shadow-xl hover:shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-3 space-x-reverse">
+                                    <button type="submit" id="submit-btn"
+                                        class="w-full  cursor-pointer py-5 bg-gradient-to-r from-blue-600 to-emerald-500 text-white text-xl font-extrabold rounded-2xl shadow-xl hover:shadow-blue-500/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center space-x-3 space-x-reverse disabled:opacity-50 disabled:cursor-not-allowed">
                                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                                         </svg>
-                                        <span>إرسال الطلب الآن</span>
+                                        <span id="submit-text" class="mx-2">إرسال الطلب</span>
                                     </button>
                                     <p class="text-center text-gray-500 text-sm mt-6 flex items-center justify-center">
                                         <svg class="w-4 h-4 ml-2 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
@@ -195,11 +242,13 @@
         const dropArea = document.getElementById('drop-area');
         const fileInput = document.getElementById('file-upload');
         const previewList = document.getElementById('file-preview-list');
+        const form = document.getElementById('application-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const submitText = document.getElementById('submit-text');
 
-        // Click to upload
+        // File Handling
         dropArea.addEventListener('click', () => fileInput.click());
 
-        // Drag and drop events
         ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
             dropArea.addEventListener(eventName, preventDefaults, false);
         });
@@ -234,11 +283,17 @@
         });
 
         function handleFiles(files) {
+            // Clear existing previews if we want to only show current selection
+            // Or append. Native file input replaces files on selection unless we manually manage a DataTransfer.
+            // For simplicity with basic file input, we just preview what is selected.
+            // If we want multiple additions, we need a custom file list management which is complex.
+            // Let's assume standard behavior: selection replaces previous.
+            
+            previewList.innerHTML = ''; 
             [...files].forEach(previewFile);
         }
 
         function previewFile(file) {
-            const reader = new FileReader();
             const fileDiv = document.createElement('div');
             fileDiv.className = 'relative p-3 bg-gray-50 rounded-xl border border-gray-200 group animate-fadeIn';
 
@@ -253,12 +308,17 @@
 
             fileDiv.innerHTML = `
             ${fileIcon}
-            <p class="text-xs text-gray-500 truncate mt-2 text-center">${file.name}</p>
-            <button type="button" class="absolute -top-2 -left-2 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-red-600 transition-colors" onclick="this.parentElement.remove()">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
+            <p class="text-xs text-gray-500 truncate mt-2 text-center" title="${file.name}">${file.name}</p>
+            <p class="text-[10px] text-gray-400 text-center">${(file.size / 1024).toFixed(1)} KB</p>
         `;
             previewList.appendChild(fileDiv);
         }
+
+        // Form Submission - Standard Laravel Submit
+        form.addEventListener('submit', function() {
+            // Optional: Simple UI feedback, but standard form will load new page
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            submitText.textContent = 'جاري الإرسال...';
+        });
     </script>
 @endpush
