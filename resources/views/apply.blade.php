@@ -111,7 +111,7 @@
 
                                 <!-- Personal Information -->
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div class="md:col-span-2">
+                                    <div>
                                         <label for="name" class="block text-lg font-bold text-gray-800 mb-2">الاسم الكامل</label>
                                         <input type="text" id="name" name="name" required value="{{ old('name') }}"
                                             class="w-full px-6 py-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:border-blue-400 focus:ring-0 transition-all duration-300 text-gray-700 placeholder-gray-400 @error('name') border-red-300 bg-red-50 @enderror">
@@ -121,7 +121,7 @@
                                     </div>
 
                                     <div>
-                                        <label for="phone" class="block text-lg font-bold text-gray-800 mb-2">رقم الهاتف</label>
+                                        <label for="phone" class="block text-lg font-bold text-gray-800 mb-2">رقم الجوال</label>
                                         <input type="tel" id="phone" name="phone" required value="{{ old('phone') }}"
                                             class="w-full px-6 py-4 bg-gray-50 border-2 border-gray-100 rounded-2xl focus:border-blue-400 focus:ring-0 transition-all duration-300 text-gray-700 placeholder-gray-400 @error('phone') border-red-300 bg-red-50 @enderror"
                                             placeholder="777777777">
