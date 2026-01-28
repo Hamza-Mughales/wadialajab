@@ -54,11 +54,11 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->renderHook(
                 \Filament\View\PanelsRenderHook::GLOBAL_SEARCH_BEFORE,
-                fn (): string => view('filament.hooks.language-switch'),
+                fn (): string => view('filament.hooks.language-switch')->render(),
             )
             ->renderHook(
                 \Filament\View\PanelsRenderHook::AUTH_LOGIN_FORM_AFTER,
-                fn (): string => view('filament.hooks.language-switch'),
+                fn (): string => view('filament.hooks.language-switch')->render(),
             );
     }
 }
