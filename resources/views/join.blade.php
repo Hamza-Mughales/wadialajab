@@ -97,10 +97,10 @@
             @csrf
 
             <div class="mb-5 sm:mb-6">
-                <label for="full_name" class="block font-semibold text-gray-700 mb-2 text-sm">
+                <label for="name" class="block font-semibold text-gray-700 mb-2 text-sm">
                     الاسم الكامل <span class="text-red-600">*</span>
                 </label>
-                <input type="text" name="full_name" id="full_name" value="{{ old('full_name') }}" required
+                <input type="text" name="name" id="name" value="{{ old('name') }}" required
                     placeholder="أدخل اسمك الكامل"
                     class="w-full px-3 sm:px-4 py-3 sm:py-3.5 border-2 border-gray-200 rounded-xl text-base transition-all duration-300 bg-white focus:outline-none focus:border-[#667eea] focus:shadow-lg focus:shadow-purple-200/50 focus:-translate-y-0.5 hover:border-gray-300">
             </div>

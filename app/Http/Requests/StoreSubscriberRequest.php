@@ -14,7 +14,7 @@ class StoreSubscriberRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'full_name' => ['required', 'string', 'max:255'],
+            'name' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:50'],
             'amount' => ['required', 'numeric', 'min:0'],
             'email' => ['nullable', 'email', 'max:255'],

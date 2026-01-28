@@ -11,8 +11,8 @@ class SubscriberForm
     {
         return $schema
             ->components([
-                TextInput::make('full_name')
-                    ->label(__('subscriber.fields.full_name'))
+                TextInput::make('name')
+                    ->label(__('subscriber.fields.name'))
                     ->required()
                     ->maxLength(255),
 
