@@ -1,59 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏥 صندوق وادي العجب الخيري (Wadi AlAjab Charity Fund)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welcome to the Wadi AlAjab Charity Fund application. This system is designed to manage charity applications, subscribers, and automated reminders with a professional, secure, and user-friendly interface.
 
-## About Laravel
+## 🌟 About the Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Wadi AlAjab is a charitable initiative focused on supporting patients and those in need. The application serves as a comprehensive management system for:
+- Tracking and processing charity **Applications**.
+- Managing **Subscribers** and donors.
+- Automated **Reminder Logs** for follow-ups and notifications.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The system is built with a "Professional Medical" design philosophy, utilizing a calming palette of Medical Blues and Emerald Greens to inspire trust, safety, and hope.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Key Features
 
-## Learning Laravel
+- **Application Management**: centralized dashboard to review and process beneficiary applications.
+- **Subscriber Database**: Maintain detailed records of subscribers and donors.
+- **Automated Reminders**: System for tracking notifications and follow-ups.
+- **Professional UI/UX**: Built with **Filament v4** and **Tailwind CSS v4** for a modern, responsive administrative interface.
+- **Secure & Scalable**: Powered by **Laravel 12** and **PHP 8.2+**.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🛠️ Tech Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Framework**: [Laravel 12](https://laravel.com)
+- **Admin Panel**: [Filament v4](https://filamentphp.com)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com)
+- **Frontend Tooling**: [Vite](https://vitejs.dev)
+- **Language**: PHP 8.2+
 
-## Laravel Sponsors
+## ⚙️ Installation
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+To set up the project locally, follow these steps:
 
-### Premium Partners
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/your-username/wadialajab.git
+    cd wadialajab
+    ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+2.  **Install Dependencies & Setup**
+    We have a convenient setup script that handles composer installation, environment setup, key generation, migrations, and frontend building.
+    ```bash
+    composer run setup
+    ```
+    *Alternatively, you can run commands manually:*
+    ```bash
+    composer install
+    cp .env.example .env
+    php artisan key:generate
+    php artisan migrate
+    npm install
+    npm run build
+    ```
 
-## Contributing
+## 🖥️ Usage
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+To start the development server with all necessary services (Laravel, Queue, Vite, etc.):
 
-## Code of Conduct
+```bash
+composer run dev
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+This command uses `concurrently` to run:
+- Laravel Development Server (`php artisan serve`)
+- Queue Worker (`php artisan queue:listen`)
+- Vite (`npm run dev`)
+- Pail for logs (`php artisan pail`)
 
-## Security Vulnerabilities
+Access the admin panel at: `http://127.0.0.1:8000/admin` (or the URL provided in your terminal).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🎨 Brand Identity
 
-## License
+The application follows a strict **Medical Professional** color scheme:
+- **Primary**: Medical Blue (`blue-600`) - representing trust and professionalism.
+- **Secondary**: Emerald Green (`emerald-500`) - representing health and hope.
+- **Accent**: Cyan/Teal - for freshness and care.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🧪 Testing
+
+To run the test suite:
+
+```bash
+composer run test
+```
+
+## 📄 License
+
+This software is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
