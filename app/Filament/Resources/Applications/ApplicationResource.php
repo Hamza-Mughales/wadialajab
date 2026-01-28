@@ -6,13 +6,18 @@ use App\Enums\ApplicationStatus;
 use App\Filament\Resources\Applications\Pages\CreateApplication;
 use App\Filament\Resources\Applications\Pages\EditApplication;
 use App\Filament\Resources\Applications\Pages\ListApplications;
+use App\Filament\Resources\Applications\Pages\ViewApplication;
 use App\Models\Application;
 use BackedEnum;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
@@ -111,6 +116,110 @@ class ApplicationResource extends Resource
             ]);
     }
 
+    public static function infolist(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Grid::make(3)
+                    ->schema([
+                        Section::make(__('application.sections.applicant_info'))
+                            ->columns(3)
+                            ->schema([
+                                TextEntry::make('name')
+                                    ->label(__('application.fields.name'))
+                                    ->weight('bold')
+                                    ->size('lg')
+                                    ->icon('heroicon-o-user')
+                                    ->columnSpan(1),
+                                TextEntry::make('phone')
+                                    ->label(__('application.fields.phone'))
+                                    ->icon('heroicon-o-phone')
+                                    ->copyable()
+                                    ->columnSpan(1),
+                                TextEntry::make('created_at')
+                                    ->label(__('application.fields.created_at'))
+                                    ->date('Y-m-d')
+                                    ->icon('heroicon-o-calendar')
+                                    ->columnSpan(1),
+                                TextEntry::make('description')
+                                    ->label(__('application.fields.description'))
+                                    ->markdown()
+                                    ->prose()
+                                    ->columnSpanFull(),
+                            ])
+                            ->columnSpan(2),
+
+                        Section::make(__('application.fields.status'))
+                            ->schema([
+                                TextEntry::make('status')
+                                    ->label(__('application.fields.status'))
+                                    ->badge()
+                                    ->columnSpanFull(),
+
+                                TextEntry::make('reviewed_at')
+                                    ->label(__('application.fields.reviewed_at'))
+                                    ->date('Y-m-d')
+                                    ->placeholder(__('application.messages.not_reviewed_yet'))
+                                    ->visible(fn ($record) => $record->reviewed_at !== null)
+                                    ->columnSpanFull(),
+                            ])
+                            ->columnSpan(1),
+                    ])
+                    ->columnSpanFull(),
+
+                Grid::make(2)
+                    ->columnSpanFull()
+                    ->schema([
+                        Section::make(__('application.fields.files'))
+                            ->schema([
+                                \Filament\Infolists\Components\RepeatableEntry::make('files')
+                                    ->label('')
+                                    ->schema([
+                                        TextEntry::make('path')
+                                            ->label('')
+                                            ->formatStateUsing(fn ($state) => basename($state))
+                                            ->icon('heroicon-o-document')
+                                            ->suffixActions([
+                                                \Filament\Actions\Action::make('view')
+                                                    ->label('View')
+                                                    ->icon('heroicon-o-eye')
+                                                    ->modalContent(fn ($state, $record) => view('components.file-preview-modal', [
+                                                        'url' => route('applications.download', ['application' => $record->id, 'path' => $state]),
+                                                        'mime' => \Illuminate\Support\Facades\Storage::disk('local')->mimeType($state),
+                                                    ]))
+                                                    ->modalSubmitAction(false)
+                                                    ->modalCancelAction(false)
+                                                    ->modalWidth('7xl'),
+                                                \Filament\Actions\Action::make('download')
+                                                    ->label('Download')
+                                                    ->icon('heroicon-o-arrow-down-tray')
+                                                    ->url(fn ($state, $record) => route('applications.download', ['application' => $record->id, 'path' => $state]))
+                                                    ->openUrlInNewTab(),
+                                            ]),
+                                    ])
+                                    ->state(function ($record) {
+                                        return collect($record->files ?? [])->map(fn ($path) => ['path' => $path])->toArray();
+                                    })
+                                    ->grid(3)
+                                    ->columnSpanFull(),
+                            ])
+                            ->visible(fn ($record) => ! empty($record->files))
+                            ->collapsible(),
+
+                        Section::make(__('application.fields.admin_notes'))
+                            ->schema([
+                                TextEntry::make('admin_notes')
+                                    ->label('')
+                                    ->markdown()
+                                    ->prose()
+                                    ->placeholder(__('application.messages.no_admin_notes')),
+                            ])
+                            ->visible(fn ($record) => filled($record->admin_notes))
+                            ->collapsible(),
+                    ]),
+            ]);
+    }
+
     public static function table(Table $table): Table
     {
         return $table
@@ -144,8 +253,9 @@ class ApplicationResource extends Resource
                     ->options(ApplicationStatus::class),
             ])
             ->recordActions([
-                // ViewAction::make(),
-                // EditAction::make(),
+                ViewAction::make(),
+                EditAction::make(),
+                DeleteAction::make(),
             ])
             ->toolbarActions([
                 // DeleteBulkAction::make(),
@@ -165,6 +275,7 @@ class ApplicationResource extends Resource
         return [
             'index' => ListApplications::route('/'),
             'create' => CreateApplication::route('/create'),
+            'view' => ViewApplication::route('/{record}'),
             'edit' => EditApplication::route('/{record}/edit'),
         ];
     }
