@@ -36,4 +36,8 @@ return [
             'body' => 'Your application has been received successfully.',
         ],
     ],
+    'messages' => [
+        'no_admin_notes' => 'No notes from admin yet.',
+        'not_reviewed_yet' => 'Not reviewed yet.',
+    ],
 ];
