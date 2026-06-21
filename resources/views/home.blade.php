@@ -80,14 +80,14 @@
                     style="animation-delay: 0.6s;">
                     <div
                         class="rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:bg-white/20">
-                        <div class="counter mb-2 text-3xl font-extrabold text-blue-300 sm:text-5xl">+50
+                        <div class="counter mb-2 text-3xl font-extrabold text-blue-300 sm:text-5xl">+500
                         </div>
                         <div class="text-lg font-semibold text-blue-100">مريض تم مساعدته</div>
                     </div>
 
                     <div
                         class="rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:bg-white/20">
-                        <div class="counter mb-2 text-3xl font-extrabold text-blue-300 sm:text-5xl">+30
+                        <div class="counter mb-2 text-3xl font-extrabold text-blue-300 sm:text-5xl">+200
                         </div>
                         <div class="text-lg font-semibold text-blue-100">عملية جراحية</div>
                     </div>
@@ -105,7 +105,7 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 transform animate-bounce">
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 transform animate-bounce">
             <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
@@ -307,7 +307,8 @@
                             <div class="mt-6 text-center">
                                 <p class="text-sm leading-relaxed text-blue-100">
                                     يمكنك الاشتراك الشهري بإيداع 1,000 ريال شهرياً <span
-                                        class="font-bold text-yellow-300">على الأقل</span> في أي من حساباتنا البنكية
+                                        class="font-bold text-yellow-300">على الأقل</span> في أي من حساباتنا البنكية أو
+                                    عبر محفظة جيب
                                 </p>
                             </div>
                         </div>
@@ -331,76 +332,97 @@
                         </div>
                     </div>
 
-                    <!-- Bank Accounts -->
+                    <!-- Donation Methods -->
                     <div>
-                        <div
-                            class="rounded-3xl border-2 border-blue-100 bg-gradient-to-br from-blue-50 to-emerald-50 p-8 shadow-2xl sm:p-10">
-                            <!-- Header -->
-                            <div class="mb-10 text-center">
-                                <div
-                                    class="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-emerald-500 shadow-lg">
-                                    <svg class="h-10 w-10 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <h3 class="mb-3 text-2xl font-extrabold text-gray-900 sm:text-3xl">الحسابات البنكية</h3>
-                                <p class="text-lg font-semibold text-gray-600">بنك الكريمي الإسلامي</p>
+                        <div class="rounded-3xl border border-gray-100 bg-white p-6 shadow-xl sm:p-8">
+                            <div class="mb-8 text-center">
+                                <h3 class="mb-2 text-2xl font-extrabold text-gray-900 sm:text-3xl">طرق التبرع</h3>
+                                <p class="text-base text-gray-500">اختر الطريقة المناسبة لك وأكمل التحويل</p>
                             </div>
 
-                            <!-- Bank Accounts Cards -->
-                            <div class="space-y-5">
-                                <!-- YER Account -->
-                                <div
-                                    class="rounded-2xl border-2 border-blue-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-xl">
-                                    <div class="mb-4 flex items-center justify-between">
-                                        <div class="text-base font-bold text-gray-800">الحساب بالريال اليمني</div>
-                                        <span
-                                            class="rounded-full bg-gradient-to-r from-blue-600 to-emerald-500 px-4 py-1.5 text-sm font-bold text-white shadow-md">ريال</span>
+                            <div class="space-y-6">
+                                <!-- AlKuraimi Bank -->
+                                <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                                    <div
+                                        class="border-b border-blue-100 bg-gradient-to-br from-blue-50 to-emerald-50 px-6 py-7 sm:py-8">
+                                        <img src="{{ asset('alkuraimi-logo.png') }}"
+                                            alt="بنك الكريمي للتمويل الأصغر الإسلامي"
+                                            class="mx-auto h-auto w-full max-w-xs object-contain invert sm:max-w-sm md:max-w-md">
                                     </div>
-                                    <div class="text-center font-mono text-2xl font-extrabold tracking-wider text-gray-900 sm:text-3xl"
-                                        dir="ltr">121525025</div>
+
+                                    <div class="grid grid-cols-1 gap-3 bg-gray-50 p-4 md:grid-cols-3 md:gap-4 md:p-5">
+                                        <div
+                                            class="min-w-0 rounded-xl border border-blue-100 bg-white p-4 text-center transition-shadow hover:shadow-md">
+                                            <span
+                                                class="mb-3 inline-block rounded-full bg-gradient-to-r from-blue-600 to-emerald-500 px-3 py-1 text-xs font-bold text-white">ريال
+                                                يمني</span>
+                                            <p class="mb-2 text-sm font-semibold text-gray-600">الحساب الرئيسي</p>
+                                            <p class="break-all font-mono text-sm font-bold text-gray-900 sm:text-base"
+                                                dir="ltr">121525025</p>
+                                        </div>
+
+                                        <div
+                                            class="min-w-0 rounded-xl border border-blue-100 bg-white p-4 text-center transition-shadow hover:shadow-md">
+                                            <span
+                                                class="mb-3 inline-block rounded-full bg-gradient-to-r from-blue-600 to-emerald-500 px-3 py-1 text-xs font-bold text-white">ريال
+                                                سعودي</span>
+                                            <p class="mb-2 text-sm font-semibold text-gray-600">حساب التحويل</p>
+                                            <p class="break-all font-mono text-sm font-bold text-gray-900 sm:text-base"
+                                                dir="ltr">421204501</p>
+                                        </div>
+
+                                        <div
+                                            class="min-w-0 rounded-xl border border-blue-100 bg-white p-4 text-center transition-shadow hover:shadow-md">
+                                            <span
+                                                class="mb-3 inline-block rounded-full bg-gradient-to-r from-blue-600 to-emerald-500 px-3 py-1 text-xs font-bold text-white">ريال
+                                                يمني</span>
+                                            <p class="mb-2 text-sm font-semibold text-gray-600">حساب عدن</p>
+                                            <p class="break-all font-mono text-sm font-bold text-gray-900 sm:text-base"
+                                                dir="ltr">3155039611</p>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!-- SAR Account -->
-                                <div
-                                    class="rounded-2xl border-2 border-blue-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-xl">
-                                    <div class="mb-4 flex items-center justify-between">
-                                        <div class="text-base font-bold text-gray-800">الحساب بالريال السعودي</div>
-                                        <span
-                                            class="rounded-full bg-gradient-to-r from-blue-600 to-emerald-500 px-4 py-1.5 text-sm font-bold text-white shadow-md">ر.س</span>
+                                <!-- Jaib Wallet -->
+                                <div class="overflow-hidden rounded-2xl border border-red-100 shadow-sm">
+                                    <div class="flex items-center gap-4 border-b border-red-100 bg-white px-6 py-5">
+                                        <img src="{{ asset('jaib-logo.png') }}" alt="محفظة جيب"
+                                            class="h-12 w-auto shrink-0 object-contain sm:h-14">
+                                        <div>
+                                            <h4 class="text-lg font-bold text-gray-900">محفظة جيب</h4>
+                                            <p class="text-sm text-gray-500">تحويل مباشر عبر المحفظة الإلكترونية</p>
+                                        </div>
                                     </div>
-                                    <div class="text-center font-mono text-2xl font-extrabold tracking-wider text-gray-900 sm:text-3xl"
-                                        dir="ltr">421204501</div>
-                                </div>
 
-                                <!-- Legitimacy Areas Account -->
-                                <div
-                                    class="rounded-2xl border-2 border-blue-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-xl">
-                                    <div class="mb-4 flex items-center justify-between">
-                                        <div class="text-base font-bold text-gray-800">الحساب بالريال اليمني - عدن</div>
-                                        <span
-                                            class="rounded-full bg-gradient-to-r from-blue-600 to-emerald-500 px-4 py-1.5 text-sm font-bold text-white shadow-md">ريال</span>
+                                    <div class="bg-red-50 px-6 py-6">
+                                        <div
+                                            class="flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10">
+                                            <div class="text-center">
+                                                <p class="mb-2 text-sm font-semibold text-gray-600">رقم المحفظة</p>
+                                                <p class="font-mono text-2xl font-extrabold tracking-wide text-gray-900 sm:text-3xl"
+                                                    dir="ltr">771426679</p>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <p class="mb-3 text-sm font-semibold text-gray-600">أو امسح رمز QR</p>
+                                                <img src="{{ asset('jaib-qrcode.png') }}" alt="رمز QR لمحفظة جيب"
+                                                    class="mx-auto h-36 w-36 rounded-xl border border-red-100 bg-white p-2 shadow-sm sm:h-40 sm:w-40">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="text-center font-mono text-2xl font-extrabold tracking-wider text-gray-900 sm:text-3xl"
-                                        dir="ltr">3155039611</div>
                                 </div>
                             </div>
 
-                            <!-- Note -->
-                            <div class="mt-8 rounded-2xl border-2 border-blue-200 bg-white p-5 shadow-sm">
-                                <div class="flex items-start space-x-3 space-x-reverse">
-                                    <svg class="ml-2 mt-0.5 h-6 w-6 flex-shrink-0 text-blue-600" fill="none"
-                                        stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                    <p class="text-sm font-medium leading-relaxed text-gray-700">
-                                        يمكنك التبرع عبر الإيداع المباشر في أي حساب عبر بنك الكريمي الإسلامي
-                                    </p>
-                                </div>
+                            <div class="mt-6 flex items-start gap-3 rounded-xl bg-blue-50 p-4">
+                                <svg class="mt-0.5 h-5 w-5 shrink-0 text-blue-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <p class="text-sm leading-relaxed text-gray-600">
+                                    يمكنك التبرع عبر الإيداع المباشر في أي حساب بنكي أعلاه، أو عبر التحويل إلى محفظة
+                                    جيب على الرقم المذكور أو بمسح رمز QR
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -458,7 +480,7 @@
                             </svg>
                         </div>
                         <h3 class="mb-2 text-xl font-bold">الهاتف</h3>
-                        <p class="text-blue-100" dir="ltr">+967 987 987 987</p>
+                        <p class="text-blue-100" dir="ltr">+967771426679</p>
                     </div>
 
                     <div class="rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-md">
@@ -485,7 +507,7 @@
                                 d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                         </svg>
                     </a>
-                    <a href="#"
+                    <a href="https://wa.me/967771426679" target="_blank" rel="noopener noreferrer"
                         class="ml-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-white/20">
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                             <path
