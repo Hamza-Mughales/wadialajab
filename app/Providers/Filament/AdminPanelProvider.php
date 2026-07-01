@@ -2,6 +2,8 @@
 
 namespace App\Providers\Filament;
 
+use App\Http\Middleware\SetLocale;
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -10,9 +12,10 @@ use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
+use Filament\View\PanelsRenderHook;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
+use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
@@ -38,27 +41,31 @@ class AdminPanelProvider extends PanelProvider
                 Dashboard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
+            ->plugins([
+                FilamentShieldPlugin::make()
+                    ->navigationGroup(__('user.navigation_group')),
+            ])
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
                 StartSession::class,
                 AuthenticateSession::class,
                 ShareErrorsFromSession::class,
-                VerifyCsrfToken::class,
+                PreventRequestForgery::class,
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
-                \App\Http\Middleware\SetLocale::class,
+                SetLocale::class,
             ])
             ->authMiddleware([
                 Authenticate::class,
             ])
             ->renderHook(
-                \Filament\View\PanelsRenderHook::GLOBAL_SEARCH_BEFORE,
+                PanelsRenderHook::GLOBAL_SEARCH_BEFORE,
                 fn (): string => view('filament.hooks.language-switch')->render(),
             )
             ->renderHook(
-                \Filament\View\PanelsRenderHook::AUTH_LOGIN_FORM_AFTER,
+                PanelsRenderHook::AUTH_LOGIN_FORM_AFTER,
                 fn (): string => view('filament.hooks.language-switch')->render(),
             );
     }
