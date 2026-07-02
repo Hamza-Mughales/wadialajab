@@ -43,7 +43,7 @@ class AdminPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->plugins([
                 FilamentShieldPlugin::make()
-                    ->navigationGroup(__('user.navigation_group')),
+                    ->navigationGroup(fn (): string => __('user.navigation_group')),
             ])
             ->middleware([
                 EncryptCookies::class,
